@@ -10,6 +10,7 @@
     "framer-motion": "^9.0.3",
     "loaders.css": "^0.1.2",
     "pacman-react": "^0.0.2",
+    "perfect-scrollbar": "^1.5.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",

@@ -2,17 +2,33 @@
   width: 100%;
   margin-top: 48px;
   margin-bottom: 48px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  scroll-behavior: smooth;
   
 }
 .mainrow-cont.scroll {
   overflow-x: scroll;
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+  overflow: -moz-scrollbars-none; /* For Firefox */
+  overflow: scroll; 
+}
+.mainrow-cont.scroll::-webkit-scrollbar {
+  display: none;
 }
 .mainrow-cont.hidden {
   overflow-x: hidden;
 }
 .rowcont-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
   width: 300px;
-  height: auto;
+  min-width: 300px;
+  height: 225px;
   backdrop-filter: blur(16px);
   margin-top: 48px;
   margin-bottom: 48px;
@@ -88,6 +104,7 @@
 @media screen and (min-width: 768px) {
   .rowcont-div {
     width: 340px;
+    min-width: 340px;
   }
   .rowcontdiv-divdiv {
     font-size: 1.125rem;

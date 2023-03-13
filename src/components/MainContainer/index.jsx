@@ -1,26 +1,40 @@
-import React from "react";
+import React, {useEffect, useState } from "react";
 import HomeContainer from "../HomeContainer";
 import "./index.css";
-import {motion} from "framer-motion";
-import {MdChevronRight, MdChevronLeft} from "react-icons/md";
-import RowContainer from './../RowContainer/index';
+import { motion } from "framer-motion";
+import { MdChevronRight, MdChevronLeft } from "react-icons/md";
+import RowContainer from "./../RowContainer/index";
+import { useStateValue } from "./../../context/StateProvider";
 
 const MainContainer = () => {
+  const [{ foodItems }, dispatch] = useStateValue();
+  const [scrollValue,setScrollValue] = useState(0);
+
+  useEffect(()=> {},[scrollValue])
+
   return (
-   <div className="main-cont">
-    <HomeContainer/>
-    <section className="mainSect-cont">
-      <div className="mainDiv-cont">
-        <p className="mainp-cont">Our Fresh & Healthy Fruits..!</p>
-        <div className="maindiv-divcont">
-          <motion.div whileTap={{scale:0.5}} className="mddiv-divcont"><MdChevronLeft className="mddiv-divconticon"/></motion.div>
-          <motion.div whileTap={{scale:0.5}} className="mddiv-divcont"><MdChevronRight className="mddiv-divconticon"/></motion.div>
+    <div className="main-cont">
+      <HomeContainer />
+      <section className="mainSect-cont">
+        <div className="mainDiv-cont">
+          <p className="mainp-cont">Our Fresh & Healthy Fruits..!</p>
+          <div className="maindiv-divcont">
+            <motion.div whileTap={{ scale: 0.5 }} className="mddiv-divcont" onClick={()=> setScrollValue(-200)}>
+              <MdChevronLeft className="mddiv-divconticon" />
+            </motion.div>
+            <motion.div whileTap={{ scale: 0.5 }} className="mddiv-divcont" onClick={()=> setScrollValue(200)}>
+              <MdChevronRight className="mddiv-divconticon" />
+            </motion.div>
+          </div>
         </div>
-      </div>
-      <RowContainer flag={true} />
-    </section>
-   </div>
-  )
-}
+        <RowContainer
+          scrollValue={scrollValue}
+          flag={true}
+          data={foodItems?.filter((n) => n.category === "fruits")}
+        />
+      </section>
+    </div>
+  );
+};
 
 export default MainContainer;
