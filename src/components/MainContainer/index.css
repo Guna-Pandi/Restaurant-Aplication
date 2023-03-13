@@ -1,0 +1,69 @@
+.main-cont{
+   width: 100%;
+   height: auto;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+.mainSect-cont{
+   width: 100%;
+   margin-top: 24px;
+   margin-bottom: 24px;
+}
+.mainDiv-cont{
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+.mainp-cont{
+   font-size: 26px;
+   font-weight: 500;
+   text-transform: capitalize;
+   position: relative;
+}
+.mainp-cont::before{
+   position: absolute;
+   border-radius: 8px;
+   content: "";
+   width: 200px;
+   height: 4px;
+   bottom: -8px;
+   left: 0;
+   background: linear-gradient(to right, #FF5733, #ff5833bd);
+   transition: all ease-in-out;
+   transition-duration: 100ms;
+}
+.maindiv-divcont{
+   display: none;
+   gap: 12px;
+   align-items: center;
+}
+.mddiv-divcont{
+   width: 32px;
+   height: 32px;
+   border-radius: 8px;
+   background-color: #ff5833a7;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;
+   transition: all;
+   transition-duration: 100ms;
+   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mddiv-divcont:hover{
+   background-color: #FF5733;
+   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+.mddiv-divconticon{
+   font-size: 20px;
+   color: white;
+}
+@media screen and (min-width:768px) {
+   .maindiv-divcont{
+      display: flex;
+   }
+   
+}
