@@ -19,6 +19,13 @@
 }
 .mainrow-cont.hidden {
   overflow-x: hidden;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.rowcontdiv-imgcont{
+  width: 100%;
+  height: 100%;
+object-fit: contain;
 }
 .rowcont-div {
   display: flex;
@@ -27,7 +34,7 @@
   flex-direction: column;
   width: 275px;
   min-width: 275px;
-  height: 175px;
+  height: 220px;
   backdrop-filter: blur(16px);
   margin-top: 48px;
   margin-bottom: 48px;
@@ -45,11 +52,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
 }
 .rowcontdiv-img {
   width: 160px;
   margin-top: -32px;
   filter: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));
+  height: 160px;
 }
 .rowcontdiv-ddiv {
   width: 32px;
@@ -78,6 +87,7 @@
 }
 .rowcontdiv-divdivpara1 {
   color: black;
+  padding-top: 15px;
   font-weight: 500;
   font-size: 1rem;
   line-height: 1.5rem;
@@ -104,9 +114,29 @@
   font-size: 0.95rem;
   line-height: 1rem;
 }
+.notfound-img{
+  width: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.notfound-imgtag{
+  height: 340px;
+
+}
+.notfound-paratag{
+  color: black;
+  font-weight: 500;
+  font-size: x-large;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
 @media screen and (min-width: 768px) {
   .rowcont-div {
     width: 300px;
+    height: 220px;
+    min-height: 220px;
     min-width: 300px;
   }
   .rowcontdiv-divdiv {

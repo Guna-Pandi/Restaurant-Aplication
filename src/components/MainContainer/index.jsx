@@ -20,10 +20,10 @@ const MainContainer = () => {
         <div className="mainDiv-cont">
           <p className="mainp-cont">Our Fresh & Healthy Fruits..!</p>
           <div className="maindiv-divcont">
-            <motion.div whileTap={{ scale: 0.5 }} className="mddiv-divcont" onClick={()=> setScrollValue(-1110)}>
+            <motion.div whileTap={{ scale: 0.75 }} className="mddiv-divcont" onClick={()=> setScrollValue(-1110)}>
               <MdChevronLeft className="mddiv-divconticon" />
             </motion.div>
-            <motion.div whileTap={{ scale: 0.5 }} className="mddiv-divcont" onClick={()=> setScrollValue(1110)}>
+            <motion.div whileTap={{ scale: 0.75 }} className="mddiv-divcont" onClick={()=> setScrollValue(1110)}>
               <MdChevronRight className="mddiv-divconticon" />
             </motion.div>
           </div>
