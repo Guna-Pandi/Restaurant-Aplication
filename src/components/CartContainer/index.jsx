@@ -38,6 +38,7 @@ const CartContainer = () => {
               <motion.div whileTap={{scale:0.75}}>
               <BiMinus className="cart-btnminus"/>
               </motion.div>
+              <p className="cart-btnsecqty">1</p>
               <motion.div whileTap={{scale:0.75}}>
               <BiPlus className="cart-btnplus"/>
               </motion.div>

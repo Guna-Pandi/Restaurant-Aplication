@@ -116,9 +116,18 @@
 .cart-btnminus {
   color: rgb(232, 231, 231);
 }
-
 .cart-btnplus {
   color: rgb(232, 231, 231);
+}
+.cart-btnsecqty{
+  width: 20px;
+  height: 20px;
+	border-radius: 0.125rem;
+  color:#f9fafb;
+  background-color: #282a2c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 @media screen and (min-width: 768px) {
   .cart-container {
