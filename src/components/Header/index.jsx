@@ -13,7 +13,7 @@ import { actionType } from "./../../context/reducer";
 const Header = () => {
   const firebaseAuth = getAuth(app);
   const provider = new GoogleAuthProvider();
-  const [{ user }, dispatched] = useStateValue();
+  const [{ user,cartShow }, dispatched] = useStateValue();
   const [isMenu,setIsMenu] = useState(false);
 
   const login = async () => {
@@ -39,6 +39,12 @@ const Header = () => {
       user:null
         });
   }
+  const showCart =() =>{
+    dispatched({
+      type: actionType.SET_CART_SHOW,
+      cartShow: !cartShow,
+    });
+  }
 
   return (
     <header className="header-start">
@@ -60,7 +66,7 @@ const Header = () => {
             <li className="nav-links">About Us</li>
             <li className="nav-links">Service</li>
           </motion.ul>
-          <div className="cart-img">
+          <div className="cart-img" onClick={showCart}>
             <MdShoppingCart className="cart-img-img" />
             <div className="round-circle">
               <p className="round-circle-num">2</p>
@@ -104,7 +110,7 @@ const Header = () => {
       {/* Mobile */}
       <div className="mobile-view">
       <div className="cart-img">
-            <MdShoppingCart className="cart-img-img" />
+            <MdShoppingCart className="cart-img-img" onClick={showCart}/>
             <div className="round-circle">
               <p className="round-circle-num">2</p>
             </div>
