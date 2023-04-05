@@ -13,7 +13,7 @@ import { actionType } from "./../../context/reducer";
 const Header = () => {
   const firebaseAuth = getAuth(app);
   const provider = new GoogleAuthProvider();
-  const [{ user,cartShow }, dispatched] = useStateValue();
+  const [{ user,cartShow,cartItems }, dispatched] = useStateValue();
   const [isMenu,setIsMenu] = useState(false);
 
   const login = async () => {
@@ -68,9 +68,11 @@ const Header = () => {
           </motion.ul>
           <div className="cart-img" onClick={showCart}>
             <MdShoppingCart className="cart-img-img" />
-            <div className="round-circle">
-              <p className="round-circle-num">2</p>
-            </div>
+           {cartItems && cartItems.length > 0 && (
+             <div className="round-circle">
+             <p className="round-circle-num">{cartItems.length }</p>
+           </div>
+           )}
           </div>
           <div className="popup-profile">
             <motion.img
@@ -111,9 +113,11 @@ const Header = () => {
       <div className="mobile-view">
       <div className="cart-img">
             <MdShoppingCart className="cart-img-img" onClick={showCart}/>
-            <div className="round-circle">
-              <p className="round-circle-num">2</p>
-            </div>
+            {cartItems && cartItems.length > 0 && (
+             <div className="round-circle">
+             <p className="round-circle-num">{cartItems.length }</p>
+           </div>
+           )}
           </div>
       <Link to={"/"} className="logo-img">
           <img src={Logo} alt="img" className="logo-img-img" />
