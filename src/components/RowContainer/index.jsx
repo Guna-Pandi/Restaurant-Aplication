@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState,useCallback } from "react";
 import "./index.css";
 import { IoMdBasket } from "react-icons/io";
 import { motion } from "framer-motion";
@@ -8,18 +8,42 @@ import { actionType } from "./../../context/reducer";
 
 const RowContainer = ({ flag, data, scrollValue }) => {
   const rowContainer = useRef();
+  const [items, setItems] = useState([]);
 
-  const [{ cartItems }, dispatch] = useStateValue();
+  const [{ cartItems }, dispatch] = useStateValue({
+    cartItems: [],
+  });
 
-  const addtocart = (item) => {
+  useEffect(() => {
+    const addtocart = (item) => {
+      dispatch({
+        type: actionType.SET_CARTITEMS,
+        cartItems: items,
+      });
+      localStorage.setItem("cartItems", JSON.stringify(items));
+    };
+
+    addtocart();
+  }, [items, dispatch]);
+  const addtocart = useCallback((item) => {
     dispatch({
       type: actionType.SET_CARTITEMS,
-      cartItems: [...cartItems, item],
+      cartItems: items,
     });
-  };
+    localStorage.setItem("cartItems" ,JSON.stringify(items));
+  }, [items, dispatch]);
+  
+  useEffect(() => {
+    addtocart();
+  }, [addtocart]);
+  
   useEffect(() => {
     rowContainer.current.scrollLeft += scrollValue;
   }, [scrollValue]);
+
+  useEffect(() => {
+    addtocart();
+  }, [items, addtocart]);
 
   return (
     <div
@@ -41,7 +65,7 @@ const RowContainer = ({ flag, data, scrollValue }) => {
               <motion.div
                 whileTap={{ scale: 0.75 }}
                 className="rowcontdiv-ddiv"
-                onClick={() => addtocart(item)}>
+                onClick={() => setItems([...(cartItems || []), item])}>
                 <IoMdBasket className="rowcontddd-icon" />
               </motion.div>
             </div>

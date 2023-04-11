@@ -188,7 +188,7 @@
   transition-duration: 150ms;
   transition: ease-out;
 }
-.cart-itembutton:hover{
+.cart-itembutton:hover {
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 @media screen and (min-width: 768px) {
@@ -198,3 +198,21 @@
 }
 
 /* cart bd #282a2c  cart item #2e3033  cart total #343739*/
+.emptycart-cart {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+.empty-imgcart {
+  width: 300px;
+}
+
+.empty-paracart {
+  font-size: 20px;
+  color: #f87171;
+  font-weight: 500;
+}
