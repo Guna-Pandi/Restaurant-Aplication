@@ -1,0 +1,211 @@
+.header-start {
+  width: 100%;
+  position: fixed;
+  z-index: 50;
+  padding: 12px;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color:#f5f3f3;
+}
+.logo-img {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+.logo-img-img {
+  width: 35px;
+  object-fit: cover;
+}
+.menu-nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.menu-list {
+  display: flex;
+  gap: 20px;
+  list-style-type: none;
+}
+.nav-links {
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.605);
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.nav-links1 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.605);
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.nav-links:hover {
+  color: black;
+  cursor: pointer;
+  transition-duration: 100ms;
+  transition-property: all;
+  transition-timing-function: ease-in-out;
+}
+.nav-links1:hover {
+  color: black;
+  cursor: pointer;
+  transition-duration: 100ms;
+  transition-property: all;
+  transition-timing-function: ease-in-out;
+  background-color: rgba(204, 203, 203, 0.488);
+  border-radius: 8px;
+}
+
+.logo span {
+  color: #fc5252;
+}
+
+.desk-head {
+  font-size: 20px;
+  color: black;
+  font-weight: 500;
+}
+.span-resto {
+  color: red;
+}
+.cart-img {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cart-img-img {
+  color: black;
+  font-size: xx-large;
+  cursor: pointer;
+}
+.round-circle {
+  background-color: red;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -8px;
+  right: -8px;
+}
+.round-circle-num {
+  font-size: small;
+  color: white;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.avart-img {
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  min-height: 40px;
+  filter: drop-shadow(0 35px 35px rgba(0, 0, 0, 0.758));
+  cursor: pointer;
+}
+.popup-profile {
+  position: relative;
+}
+.drop-down {
+  width: 160px;
+  font-weight: 400;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+  border-radius: 0.5rem;
+  position: absolute;
+  top: 48px;
+  right: 0px;
+  display: flex;
+  flex-direction: column;
+  color: rgba(0, 0, 0, 0.605);
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.drop-down-icons {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.605);
+}
+.drop-down-icons1 {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  border-radius: 8px;
+  background-color: rgba(137, 137, 137, 0.874);
+  color: rgba(0, 0, 0, 0.605);
+}
+.drop-down-icons:hover {
+  background-color: rgba(112, 128, 144, 0.105);
+  border-radius: 0.4rem;
+  transition-duration: 100ms;
+  transition-property: all;
+  transition-timing-function: ease-in-out;
+  color: #000000;
+}
+.drop-down-icons1:hover {
+  background-color: rgba(15, 15, 15, 0.866);
+  border-radius: 0.4rem;
+  transition-duration: 100ms;
+  transition-property: all;
+  transition-timing-function: ease-in-out;
+  color: #ffffff;
+}
+.drop-down-link {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.605);
+}
+.menu-list1 {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+}
+.desktop-view {
+  display: none;
+}
+
+.mobile-view {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (min-width: 768px) {
+  .desktop-view {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .mobile-view {
+    display: none;
+    width: 100%;
+    height: 100%;
+  }
+  .header-start {
+    padding: 24px;
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+}

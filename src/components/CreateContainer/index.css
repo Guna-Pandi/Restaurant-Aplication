@@ -1,0 +1,234 @@
+.create-Cont {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.subCreate-Cont {
+  width: 90%;
+  border: 2px solid rgba(128, 128, 128, 0.222);
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  justify-content: center;
+}
+.fields-para {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  text-align: center;
+  color: black;
+  font-weight: 600;
+}
+.fields-para.active {
+  background-color: rgba(242, 57, 57, 0.778);
+}
+
+.fields-para.inactive {
+  background-color: rgb(6, 201, 126);
+}
+.icon-Cont {
+  width: 100%;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-bottom-width: 1px;
+  border: 1px solid rgba(128, 128, 128, 0.222);
+  display: flex;
+  border-radius: 8px;
+  align-items: center;
+  gap: 8px;
+}
+.fastfood-icon {
+  font-size: 1.3rem;
+  color: rgb(67, 67, 67);
+  margin-left: 5px;
+}
+.title-input {
+  width: 100%;
+  height: 100%;
+  font-size: large;
+  background-color: transparent;
+  font-weight: 400;
+  outline: none;
+  border: none;
+}
+.title-input::placeholder {
+  color: #11111166;
+  font-weight: 500;
+}
+.category {
+  width: 100%;
+}
+.select-option {
+  background-color: white;
+}
+.category-option {
+  font-size: 18px;
+  border-width: 0px;
+  outline: none;
+  text-transform: capitalize;
+  background-color: white;
+}
+.category-select {
+  outline: none;
+  width: 100%;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  border-bottom-width: 1px;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.group-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-width: 2px;
+  border-style: dotted;
+  border-color: rgba(128, 128, 128, 0.253);
+  height: 225px;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.grpsec-lable {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.grpsec-lablediv {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.lable-cloudicon {
+  font-size: 2rem;
+  color: rgba(81, 80, 80, 0.832);
+}
+.lable-cloudicon:hover {
+  color: #fc8164;
+}
+.cloudicon-para {
+  font-size: 1.2rem;
+  color: rgba(81, 80, 80, 0.832);
+}
+.cloudicon-para:hover {
+  color: #fc8164;
+}
+.lable-upimg {
+  width: 0px;
+  height: 0px;
+}
+
+.uploaded-img {
+  position: relative;
+  height: 100%;
+}
+.uploadedimage-imgtag {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.img-btn {
+  position: absolute;
+  bottom: 12px;
+  padding: 12px;
+  border-radius: 100%;
+  background-color: #ff0000f9;
+  font-size: 20px;
+  cursor: pointer;
+  outline: none;
+}
+.img-btn {
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  transition-duration: 0.5s;
+  transition: all ease-in-out;
+}
+.MdDelete-icon {
+  color: white;
+}
+.foodbank-cont {
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.foodbank-subcont {
+  width: 100%;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-bottom-width: 1px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  border: 1px solid rgba(128, 128, 128, 0.222);
+  border-color: rgba(128, 128, 128, 0.253);
+}
+.MdFoodBank-icon {
+  color: rgb(67, 67, 67);
+  font-size: 20px;
+  margin-left: 5px;
+}
+.fbank-placeholder {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  outline: none;
+  font-size: large;
+  border: none;
+}
+.fbank-placeholder::placeholder {
+  font-weight: 500;
+  color: #11111166;
+}
+.save-button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.savebutton-tag {
+  margin-left: 0px;
+  width: 100%;
+  outline: none;
+  border: none;
+  background-color: #fc8164;
+  padding-left: 48px;
+  padding-right: 48px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 8px;
+  font-size: larger;
+  color: white;
+  font-weight: 600;
+}
+@media (min-width: 768px) {
+  .subCreate-Cont {
+    width: 75%;
+  }
+  .group-section {
+    height: 420px;
+  }
+  .foodbank-cont {
+    flex-direction: row;
+  }
+  .savebutton-tag {
+    margin-left: auto;
+    width: auto;
+  }
+}
